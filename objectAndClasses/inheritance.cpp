@@ -22,6 +22,7 @@ public:
     {
         this->roll_no = roll_no;
     };
+   
     void display()
     {
         cout << "Name: " << name << endl;
