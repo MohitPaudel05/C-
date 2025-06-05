@@ -15,7 +15,7 @@ public:
         cout<<"with two agrument called"<<endl;
     }
     Base(int x, int y , int z){
-        cout<<"with three argument Constructor Called"<<endl;
+        cout<<"Base with three argument Constructor Called"<<endl;
     }
 };
 class Derived : public Base {
@@ -29,6 +29,9 @@ public:
     Derived(int g){
         cout<<"one argument"<<endl;
     }
+    Derived(int x, int y, int z): Base(x,y,z){
+        cout<<"derived Constructor with three argument called"<<endl;
+    }
 };
 
 
@@ -39,7 +42,8 @@ public:
 int main()
 {
     Derived d;
-    
+    // Base b(1,2,3);
+    // Derived d1(1,2,3);
     return 0;
 }
 
