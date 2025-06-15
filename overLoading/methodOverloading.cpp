@@ -6,30 +6,41 @@
 #include <iostream>
 using namespace std;
 
-class Calculator {
+class Sum {
 public:
-    // Add two integers
+    
     int add(int a, int b) {
         return a + b;
     }
 
-    // Add three integers
+    
     int add(int a, int b, int c) {
         return a + b + c;
     }
 
-    // Add two doubles
+    
     double add(double a, double b) {
         return a + b;
     }
+    void show(){
+        cout<<"method Overloading";
+    }
+    int show(int x){
+        return x;
+    }
+    
 };
 
 int main() {
-    Calculator calc;
+    Sum s;
 
-    cout << "Sum of 2 and 3: " << calc.add(2, 3) << endl;
-    cout << "Sum of 1, 2 and 3: " << calc.add(1, 2, 3) << endl;
-    cout << "Sum of 2.5 and 3.7: " << calc.add(2.5, 3.7) << endl;
+    cout << "Sum of 2 and 3: " << s.add(2, 3) << endl;
+    cout << "Sum of 1, 2 and 3: " << s.add(1, 2, 3) << endl;
+    cout << "Sum of 2.5 and 3.7: " << s.add(2.5, 3.7) << endl;
+    
+     s.show();
+     cout<<endl;
+    cout<< "The message is => "<< s.show(5);
 
     return 0;
 }
