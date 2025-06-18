@@ -22,6 +22,7 @@ class Student{
     
 
 };
+
 int main(){
     Student s1("Alice",101);
     Student s2("Bob",101);
