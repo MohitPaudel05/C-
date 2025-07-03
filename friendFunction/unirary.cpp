@@ -16,11 +16,18 @@ public:
         return Number(num);
     }
     Number operator-()
+
     {
         return Number(-num);
     }
+     // Prefix increment operator
+    Number& operator++() {
+        ++num;
+        return *this;
+    }
 
-    friend int add(Number n1, Number n2);
+
+    friend int operator+(Number n1, Number n2);
 
     void display()
     {
@@ -28,7 +35,7 @@ public:
     }
 };
 
-int add(Number n1, Number n2)
+int operator+(Number n1, Number n2)
 {
     return n1.num + n2.num;
 }
@@ -45,13 +52,17 @@ int main()
     num1.display();
     num2.display();
 
-    cout << "\nAfter unary +: ";
+    cout << "\nAfter unary + num3 is : ";
     num3.display();
 
-    cout << "After unary -: ";
+    cout << "After unary - num4 is : ";
     num4.display();
+    // Demonstrate prefix increment
+    ++num1;
+    cout << "\nAfter prefix ++num1: ";
+    num1.display();
 
-    cout << "\nSum of num1 and num2: " << add(num1, num2) << endl;
+    cout << "\nSum of num1 and num2: " << operator+(num1, num2) << endl;
 
     return 0;
 }

@@ -38,6 +38,7 @@ int main()
     cout<<"Original Details==>"<<endl;
     s1.display();
     s2.display();
+    cout<<"the new id of second object is: "<<endl;
     changeDetails(s2,201,"izzu");
     s2.display();
 

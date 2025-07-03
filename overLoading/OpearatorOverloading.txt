@@ -1,0 +1,10 @@
+Operator Overloading :
+The ability of making operator to work for user defined class and having the ability to provide operator with as special user defined meaning.
+
+
+
+Syntax :
+returnType operator(operator symbol) (arguments){
+    block of statement//
+}
+1. Unary Operator
