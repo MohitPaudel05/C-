@@ -11,12 +11,12 @@ using namespace std;
 // Custom exception class
 class InvalidAgeException : public exception {
 public:
-    const char* what() const noexcept override {
+    const char* what() const noexcept override{
         return "Invalid age entered! Age must be between 0 and 150.";
     }
 };
 
-// Person class to handle input and validation
+// Person class to handle input and output
 class Person {
 private:
     int age;
