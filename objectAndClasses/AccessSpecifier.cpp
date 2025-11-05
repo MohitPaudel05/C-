@@ -1,40 +1,44 @@
-#include <iostream>
-using  namespace std;
-class Base{
-    /**
-     * only accessible from class
-     *
-     */
-private:
-    int privateVariable;
-public:
+#include<iostream>
+using namespace std;
+class parent {
+    private :
+    int privatedVariable;
+    public:
     int publicVariable;
-protected:
+    protected:
     int protectedVariable;
 
+    public:
+    void display(){
+        cout<<"Private Variable "<<privatedVariable<<endl;
+        cout<<"Public Variable "<<publicVariable<<endl;
+        cout<<"Protected Variable "<<protectedVariable<<endl;
 
-public:
-    int getProtectedVariable()
-    {
-        return protectedVariable;
     }
 
 };
-class Derived: public Base {
-public:
-    void setProtectedVariable(int x)
-    {
-        protectedVariable =x;
-    }
 
+class child:public parent{
 
 
 };
 
-int main()
-{
-    Derived d;
-    d.setProtectedVariable(10);
-    cout<<"Protected Variable"<<d.getProtectedVariable();
+class child2: protected parent{
 
+    void childDisplay(){
+        display();
+    }
+
+
+};
+
+
+
+
+
+int main(){
+    child c2;
+    c2.display();
+
+    return 0;
 }

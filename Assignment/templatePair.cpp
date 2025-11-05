@@ -8,11 +8,13 @@ using namespace std;
 // Class Template with two type parameters
 template <typename T1, typename T2>
 class Pair {
-private:
-    T1 first;
-    T2 second;
+// private:
+//     T1 first;
+//     T2 second;
 public:
     // Constructor
+    T1 first;
+    T1 second;
     Pair(T1 a, T2 b) {
         first = a;
         second = b;
