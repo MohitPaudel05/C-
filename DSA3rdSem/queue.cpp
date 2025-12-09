@@ -28,6 +28,7 @@ public:
             ;            return -1;
         }
         int data = a[front];
+   
         front = front + 1;
         return data;
     }
